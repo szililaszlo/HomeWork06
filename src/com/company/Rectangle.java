@@ -22,12 +22,12 @@ public class Rectangle extends AbstractShape {
 
     @Override
     public float getArea() {
-        return 0;
+        return this.a * this.b;
     }
 
     @Override
     public float getPerimeter() {
-        return 0;
+        return (this.a+this.b)*2;
     }
 
     @Override

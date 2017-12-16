@@ -40,12 +40,14 @@ public class Triangle extends AbstractShape {
 
     @Override
     public float getArea() {
-        return 0;
+        //a Math.sin függvény double értéket ad, ezér át kell kasztolni, habár így az érték pontatlna lesz,
+        //de mivel az UML  alapján a metódus float-ot ad vissza kénytelen voltam így megoldnai
+        return (this.c*this.a* ( (float) Math.sin (this.beta) ) ) /2 ;
     }
 
     @Override
     public float getPerimeter() {
-        return 0;
+        return this.a+this.b+this.c;
     }
 
     @Override
