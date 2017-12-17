@@ -8,6 +8,6 @@ public interface IMatrixOperation {
 
     public int[][] multiplyWithScalar(int number, int[][] matrix);
 
-    public int[][] sum(int [] matrix1, int[][] matrix2);
+    public int[][] sum(int [][] matrix1, int[][] matrix2);
 
 }
