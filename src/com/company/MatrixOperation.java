@@ -13,7 +13,7 @@ public class MatrixOperation implements IMatrixOperation {
         }
     }
 
-    //nem funkiconál
+    //nem funkiconál, a feladatlap nem kéri
     @Override
     public int[][] initMatrixWithRandomNumbers(int n, int m, int min, int max) {
         return new int[0][];
@@ -24,7 +24,7 @@ public class MatrixOperation implements IMatrixOperation {
     //mátrix szorzás
     @Override
     public int[][] multiplyWithScalar(int number, int[][] matrix) {
-        //létrehozk egy , a z eredetivel megegyező mátrixot
+        //létrehozk egy , az eredetivel megegyező mátrixot
         int newMatrix[][] = matrix;
         //végigmegyek az elemein
         for (int i = 0; i < matrix.length; i++) {
@@ -38,9 +38,21 @@ public class MatrixOperation implements IMatrixOperation {
         return newMatrix;
     }
 
-    //nem funkcionál
+    //5
+    //két db n*m-s mátrix összeadása
     @Override
-    public int[][] sum(int[] matrix1, int[][] matrix2) {
-        return new int[0][];
+    public int[][] sum(int[][] matrix1, int[][] matrix2) {
+        //létrehozk egy , az eredetivel megegyező mátrixot
+        int newMatrix[][] = matrix1;
+        //végigmegyek az elemein
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[i].length; j++) {
+                //a paraméterként kapott 2 mátrix azonos pozicióba lévő elemeit összeadja és az új mátrix azonos
+                //poziciójába menti el
+                newMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        //visszatér az új mátrixal, a régi mátrixok érintetlenek maradnak
+        return newMatrix;
     }
 }

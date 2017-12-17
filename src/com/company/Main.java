@@ -31,5 +31,12 @@ public class Main {
         MatrixOperation matrixOperation = new MatrixOperation();
         //függvényhívás, ellenőrzés céljából
         matrixOperation.printMatrix(matrixOperation.multiplyWithScalar(2, testMatrix));
+
+        //5
+        //teszt mátrixok
+        int sumMatrix1[][] = {{1, 3, 2}, {1, 0, 0}, {1,2,2}};
+        int sumMatrix2[][] = {{0, 0, 5}, {7, 5, 0},{2,1,1}};
+        //függvényhívás, ellenőrzés céljából
+        matrixOperation.printMatrix(matrixOperation.sum(sumMatrix1,sumMatrix2));
     }
 }
