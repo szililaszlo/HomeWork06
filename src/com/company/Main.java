@@ -23,5 +23,13 @@ public class Main {
         // terület és kerület kiíratás
         System.out.println(triangle.getPerimeter());
         System.out.println(triangle.getArea());
+
+        //4
+        //teszt mátrix
+        int testMatrix[][] = {{1, 8, -3}, {4, -2, 5}};
+        //példányosítás
+        MatrixOperation matrixOperation = new MatrixOperation();
+        //függvényhívás, ellenőrzés céljából
+        matrixOperation.printMatrix(matrixOperation.multiplyWithScalar(2, testMatrix));
     }
 }
